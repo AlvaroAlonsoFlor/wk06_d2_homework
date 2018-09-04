@@ -62,6 +62,20 @@ Park.prototype.totalRevenueYear = function () {
   return this.numberOfVisitorsPerYear() * 10;
 };
 
+Park.prototype.seeDiets = function () {
+  const diets = {};
+
+  for (dinosaur of this.dinosaurs) {
+    if (!diets[dinosaur.diet]) {
+      diets[dinosaur.diet] = 0;
+    }
+    diets[dinosaur.diet] += 1 ;
+
+  }
+
+  return diets;
+};
+
 
 
 
