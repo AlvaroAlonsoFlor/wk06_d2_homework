@@ -63,4 +63,12 @@ describe('Park', function() {
     assert.deepStrictEqual(actual, []);
   });
 
+  it('should be able to calculate the total number of visitors per day');
+
+  it('should be able to calculate the total number of visitors per year');
+
+  it('should be able to calculate the total revenue from ticket sales for one year')
+
+  it('should be able to see how many dinosaurs with each diet type the park has')
+
 });
