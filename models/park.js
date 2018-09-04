@@ -30,5 +30,11 @@ Park.prototype.findMostPopular = function () {
 
 };
 
+Park.prototype.findDinosaursBySpecies = function (species) {
+  let dinosaurs = this.dinosaurs;
+  const result = dinosaurs.filter(dinosaur => dinosaur.species === species);
+  return result;
+};
+
 
 module.exports = Park;
