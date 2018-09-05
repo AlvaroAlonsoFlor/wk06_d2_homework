@@ -17,7 +17,7 @@ Park.prototype.findMostPopular = function () {
 
   let dinosaurs = this.dinosaurs;
   let guests = 0;
-  let dinosaur = 'bla';
+  let dinosaur;
 
   for (let i = 0; i < dinosaurs.length; i++) {
     let dinosaurGuests = dinosaurs[i].guestsAttractedPerDay;
@@ -26,6 +26,9 @@ Park.prototype.findMostPopular = function () {
       dinosaur = dinosaurs[i];
     }
   }
+
+
+
 
   return dinosaur;
 
@@ -37,11 +40,16 @@ Park.prototype.findDinosaursBySpecies = function (species) {
   return result;
 };
 
+// function () why it doesn't work
+
 Park.prototype.removeDinosaursbySpecies = function (species) {
   const speciesArray = this.findDinosaursBySpecies(species);
   for (dinosaur of speciesArray) {
     this.removeDinosaur(dinosaur);
   }
+
+  // it works but it's not the most efficent way
+
 };
 
 Park.prototype.numberOfVisitorsPerDay = function () {
@@ -59,7 +67,7 @@ Park.prototype.numberOfVisitorsPerYear = function () {
 };
 
 Park.prototype.totalRevenueYear = function () {
-  return this.numberOfVisitorsPerYear() * 10;
+  return this.numberOfVisitorsPerYear() * this.ticketPrice;
 };
 
 Park.prototype.seeDiets = function () {
@@ -75,8 +83,6 @@ Park.prototype.seeDiets = function () {
 
   return diets;
 };
-
-
 
 
 
