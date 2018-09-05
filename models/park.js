@@ -40,8 +40,6 @@ Park.prototype.findDinosaursBySpecies = function (species) {
   return result;
 };
 
-// function () why it doesn't work
-
 Park.prototype.removeDinosaursbySpecies = function (species) {
   const speciesArray = this.findDinosaursBySpecies(species);
   for (dinosaur of speciesArray) {
